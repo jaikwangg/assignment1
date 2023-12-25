@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -35,6 +34,77 @@ public class Assignment1_65050669_65050776 extends JPanel {
 
             plot(g, xt, yt, 4);
         }
+    }
+
+    public void ddaLine(Graphics g, int x1, int y1, int x2, int y2) {
+        double dx = x2 - x1;
+        double dy = y2 - y1;
+        double m = dy / dx;
+        double x, y;
+        if (m <= 1 && m >= 0) {
+            y = Math.min(y1, y2);
+            for (x = Math.min(x1, x2); x <= Math.max(x1, x2); x++) {
+                y += m;
+                plot(g, (int) x, (int) y);
+            }
+        } else if (m >= -1 && m < 0) {
+            y = Math.max(y1, y2);
+            for (x = Math.max(x1, x2); x >= Math.min(x1, x2); x--) {
+                y += m;
+                plot(g, (int) x, (int) y);
+            }
+        } else if (m > 1) {
+            x = Math.min(x1, x2);
+            for (y = Math.min(y1, y2); y <= Math.max(y1, y2); y++) {
+                x += 1 / m;
+                plot(g, (int) x, (int) y);
+            }
+        } else {
+            x = Math.max(x1, x2);
+            for (y = Math.max(y1, y2); y >= Math.min(y1, y2); y--) {
+                x += 1 / m;
+                plot(g, (int) x, (int) y);
+            }
+        }
+    }
+
+    public void BresenhamLine(Graphics g, int x1, int y1, int x2, int y2) {
+        int dx = Math.abs(x2 - x1);
+        int dy = Math.abs(y2 - y1);
+
+        int sx = (x1 < x2) ? 1 : -1;
+        int sy = (y1 < y2) ? 1 : -1;
+
+        boolean isSwap = false;
+        if (dy > dx) {
+            swapTemp(dy, dx);
+            isSwap = true;
+        }
+        int D = 2 * dy - dx;
+        int x = x1;
+        int y = y1;
+         for (int i = 1; i <= dx; i++) {
+            plot(g, x, y);
+            if (D >= 0) {
+                if (isSwap)
+                    x += sx;
+                else
+                    y += sy;
+                D -= 2 * dx;
+            }
+
+            if (isSwap)
+                y += sy;
+            else
+                x += sx;
+             D += 2 * dy;
+        }
+    }
+
+    private void swapTemp(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
     }
 
     public BufferedImage floodFill(BufferedImage m, int x, int y, Color targetColour, Color replacementColour) {
