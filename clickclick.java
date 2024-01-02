@@ -11,7 +11,7 @@ public class clickclick extends JPanel {
 
     public clickclick() {
         try {
-            backgroundImage = ImageIO.read(getClass().getResourceAsStream("Dragon.png"));
+            backgroundImage = ImageIO.read(getClass().getResourceAsStream("10063949.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
