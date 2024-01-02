@@ -18,7 +18,6 @@ public class Assignment1_65050669_65050776 extends JPanel {
         try {
             backgroundImage = ImageIO.read(getClass().getResourceAsStream("10063949.jpg"));
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -185,7 +184,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         return m;
     }
 
-    private void midpointCircle(Graphics g, int xc, int yc, int r) {
+    public void midpointCircle(Graphics g, int xc, int yc, int r) {
         int x = 0, y = r;
         int Dx = 2 * x, Dy = 2 * y;
         int D = 1 - r;
@@ -209,7 +208,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         }
     }
 
-    private void midpointEllipse(Graphics g, int xc, int yc, int a, int b) {
+    public void midpointEllipse(Graphics g, int xc, int yc, int a, int b) {
         int a2 = a * a, b2 = b * b;
         int twoA2 = 2 * a2, twoB2 = 2 * b2;
         // REGION 1
