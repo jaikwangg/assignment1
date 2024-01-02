@@ -2,8 +2,28 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class clickclick extends JPanel {
+
+    private Image backgroundImage;
+
+    public clickclick() {
+        try {
+            backgroundImage = ImageIO.read(getClass().getResourceAsStream("Dragon.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }
+    }
 
     public static void main(String[] args) {
         clickclick m = new clickclick();
