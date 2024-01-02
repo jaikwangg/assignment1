@@ -30,6 +30,7 @@ public class clickclick extends JPanel {
         JFrame f = new JFrame();
         f.add(m);
         f.setSize(600, 600);
+        f.setResizable(false);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         m.addMouseListener(new MouseAdapter() {
