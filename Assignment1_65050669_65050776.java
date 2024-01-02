@@ -3,13 +3,27 @@ import java.util.Queue;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Assignment1_65050669_65050776 extends JPanel {
+    private Image backgroundImage;
+    public Assignment1_65050669_65050776(){
+        try {
+            backgroundImage = ImageIO.read(getClass().getResourceAsStream("10063949.jpg"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
+        
         Assignment1_65050669_65050776 m = new Assignment1_65050669_65050776();
 
         JFrame f = new JFrame();
@@ -19,6 +33,10 @@ public class Assignment1_65050669_65050776 extends JPanel {
         f.setVisible(true);
     }
     public void paintComponent(Graphics g) {
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        ddaLine(g,128,538,461,538);
+        ddaLine(g,128,538,461,538);
+        bezierCurve(g,464,194,487,192,490,189,498,184,3);
         // BezierCurve(g, 478, 173, 505, 211, 509, 260, 478, 274);
         // BezierCurve(g, 478, 173, 457, 209, 453, 268, 478, 274);
     }
@@ -36,6 +54,22 @@ public class Assignment1_65050669_65050776 extends JPanel {
                     Math.pow(t, 3) * y4);
 
             plot(g, xt, yt, 4);
+        }
+    }
+
+    public void bezierCurve(Graphics g, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4,int size) {
+        for (float t = 0; t <= 1; t += 0.001) {
+            int xt = (int) (Math.pow(1 - t, 3) * x1 +
+                    3 * t * Math.pow(1 - t, 2) * x2 +
+                    3 * Math.pow(t, 2) * (1 - t) * x3 +
+                    Math.pow(t, 3) * x4);
+
+            int yt = (int) (Math.pow(1 - t, 3) * y1 +
+                    3 * t * Math.pow(1 - t, 2) * y2 +
+                    3 * Math.pow(t, 2) * (1 - t) * y3 +
+                    Math.pow(t, 3) * y4);
+
+            plot(g, xt, yt, size);
         }
     }
 
