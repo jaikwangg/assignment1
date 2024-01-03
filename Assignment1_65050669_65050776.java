@@ -245,6 +245,45 @@ public class Assignment1_65050669_65050776 extends JPanel {
         buffer = floodFill(buffer, 400, 180, Color.WHITE, Color.YELLOW);
         g.drawImage(buffer, 0, 0, null);
 
+        g.setColor(Color.GRAY);
+        // Nail RB
+        int [] x0 = {171, 174, 179};
+        int [] y0 = {495, 504, 495};
+        g.fillPolygon(x0, y0, 3);
+
+        int [] x1 = {203, 207, 211};
+        int [] y1 = {495, 503, 495};
+        g.fillPolygon(x1, y1, 3);
+
+        int [] x2 = {227, 231, 235};
+        int [] y2 = {495, 502, 495};
+        g.fillPolygon(x2, y2, 3);
+
+        // Nail RF
+        int [] x3 = {287, 291, 295};
+        int [] y3 = {493, 502, 493};
+        g.fillPolygon(x3, y3, 3);
+
+        int [] x4 = {319, 323, 328};
+        int [] y4 = {493, 502, 493};
+        g.fillPolygon(x4, y4, 3);
+
+        int [] x5 = {343, 347, 351};
+        int [] y5 = {493, 502, 493};
+        g.fillPolygon(x5, y5, 3);
+
+        // Nail LF
+        int [] x6 = {374, 377, 381};
+        int [] y6 = {484, 492, 484};
+        g.fillPolygon(x6, y6, 3);
+
+        int [] x7 = {407, 411, 414};
+        int [] y7 = {484, 492, 484};
+        g.fillPolygon(x7, y7, 3);
+
+        int [] x8 = {429, 434, 438};
+        int [] y8 = {484, 492, 484};
+        g.fillPolygon(x8, y8, 3);
     }
 
     public void BezierCurve(Graphics g, int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
