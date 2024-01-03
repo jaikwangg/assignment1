@@ -42,7 +42,7 @@ public class clickclick extends JPanel {
                 int mouseX = (int) point.getX();
                 int mouseY = (int) point.getY();
 
-                System.out.println("Mouse clicked at (" + mouseX + ", " + mouseY + ")");
+                System.out.print(mouseX + ", " + mouseY+ ", ");
             }
         });
 
