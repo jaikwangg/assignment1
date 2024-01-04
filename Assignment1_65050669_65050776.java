@@ -191,6 +191,8 @@ public class Assignment1_65050669_65050776 extends JPanel {
         BezierCurve(g2,208, 53,222, 71, 250, 81, 269, 80);
         BezierCurve(g2,269, 80, 282, 79, 313, 98, 326, 125);
         BezierCurve(g2,292, 117,303, 117, 314, 118, 326, 125);
+        
+        buffer = floodFill(buffer,  286, 93, Color.WHITE, Color.decode("#5f2d24"));
         buffer = floodFill(buffer,  376, 85, Color.WHITE, Color.decode("#5f2d24"));
         //shadow
         g2.setColor(Color.BLACK);
@@ -231,6 +233,10 @@ public class Assignment1_65050669_65050776 extends JPanel {
         //face
         bezierCurve(g2, 394, 110,401, 109, 409, 105, 416, 112,1);
         bezierCurve(g2, 410, 156, 415, 145, 418, 137, 418, 129,1);
+        bezierCurve(g2, 369, 110,359, 105, 352, 97, 344, 89, 1);
+        bezierCurve(g2, 344, 89,   337, 78, 317, 68, 293, 73, 1);
+        bezierCurve(g2, 293, 73,306, 76, 317, 85, 321, 95, 1);
+        bezierCurve(g2, 244, 123, 257, 114, 278, 112, 292, 117,1);
         // BresenhamLine(g2,  410, 156, 418, 129);
         //ddaLine(g2,  410, 156, 418, 129);
         
