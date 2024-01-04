@@ -42,7 +42,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         g2.fillRect(0, 0, 600, 600);
 
         
-        //g2.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        // g2.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
          
         g2.setColor(Color.BLACK);
         
@@ -266,8 +266,6 @@ public class Assignment1_65050669_65050776 extends JPanel {
         //eye
         g2.setColor(Color.BLACK);
         midpointEllipse(g2,330, 169, 26,22);
-        g2.setColor(Color.black);
-        midpointCircle(g2,332, 159,21);
         g2.setColor(Color.BLACK);
         midpointEllipse(g2,333,165,13,11);
         g2.setColor(Color.white);
@@ -359,8 +357,9 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 369, 110,359, 105, 352, 97, 344, 89, 1);
         bezierCurve(g2, 344, 89,   337, 78, 317, 68, 293, 73, 1);
         bezierCurve(g2, 293, 73,306, 76, 317, 85, 321, 95, 1);
-        bezierCurve(g2, 293, 73,306, 76, 317, 85, 321, 95, 1);
         bezierCurve(g2, 244, 123, 257, 114, 278, 112, 292, 117,1);
+        // BresenhamLine(g2,  410, 156, 418, 129);
+        //ddaLine(g2,  410, 156, 418, 129);
         
         bezierCurve(g2, 431, 261, 428, 270, 418, 278, 405, 281, 1);
         bezierCurve(g2, 405, 281, 410, 275, 411, 271, 410, 265,1);
@@ -385,6 +384,13 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 244, 123, 257, 114, 278, 112, 292, 117,1);
 
         //mouth
+        g2.setColor(Color.decode("#5f2d24"));
+        bezierCurve(g2, 317, 229, 305, 227, 296, 220, 304, 212,1);
+        bezierCurve(g2, 317, 229, 338, 248, 394, 258, 447, 250,1);
+        bezierCurve(g2, 447, 250, 450, 240, 448, 239, 446, 237,1);
+        bezierCurve(g2, 446, 237, 413, 246, 361, 245, 322, 217, 1);
+        bezierCurve(g2, 304, 212,  308, 214, 315, 215, 322, 217, 1);
+        buffer = floodFill(buffer, 386, 250, Color.WHITE, Color.decode("#5f2d24"));
         
         //face detail
         g2.setColor(Color.BLACK);
@@ -392,7 +398,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 381, 159,380, 148,372, 133,361, 125,1);
         bezierCurve(g2, 398, 153,400, 144,398, 132,392, 125,1);
         bezierCurve(g2, 402, 153,404, 143,403, 125,395, 116, 1);
-        //431, 261
+        
         //body scale
         bezierCurve(g2, 134, 341, 138, 329, 144, 323, 151, 325,1);
         bezierCurve(g2, 151, 325,153, 313, 158, 309, 164, 313, 1);
