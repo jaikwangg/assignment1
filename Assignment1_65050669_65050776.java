@@ -56,50 +56,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         BresenhamLine(g2, 27, 121, 27, 442); // left
         BresenhamLine(g2, 563, 121, 563, 442); // right
 
-        //horn
-        g2.setColor(Color.decode("#5f2d24"));
-        BezierCurve(g2,394, 110,394, 94,392, 86,387, 78);
-        BezierCurve(g2,387, 78,376, 72,362, 65,361, 42);
-        BezierCurve(g2,361, 42,345, 63,353, 76,363, 86);
-        BezierCurve(g2,363, 86,366, 88,370, 100,369, 110);
-        ddaLine(g2,394, 110,369, 110);
-        BezierCurve(g2,250, 102,235, 102, 204, 86, 208, 53);
-        BezierCurve(g2,292, 117 ,286, 100, 269, 101, 250, 102);
-        BezierCurve(g2,208, 53,222, 85, 250, 85, 269, 81);
-        BezierCurve(g2,269, 81, 285, 79, 325, 98, 326, 125);
-        BezierCurve(g2,292, 117,303, 117, 314, 118, 326, 125);
-
         
-
-        //horn shadow
-        g2.setColor(Color.decode("#320c09"));
-        BezierCurve(g2,384, 110,380, 94,380, 86,370, 78);
-        BezierCurve(g2,370, 78,362, 72,350, 65,361, 42);
-        BezierCurve(g2,361, 42,345, 63,353, 76,363, 86);
-        BezierCurve(g2,363, 86,366, 88,370, 100,369, 110);
-        ddaLine(g2,394, 110,369, 110);
-        BezierCurve(g2,250, 102,235, 102, 204, 86, 208, 53);
-        BezierCurve(g2,292, 117 ,286, 100, 269, 101, 250, 102);
-        BezierCurve(g2,208, 53,222, 110, 250, 85, 269, 90);
-        BezierCurve(g2,269, 90, 280, 85, 320, 98, 326, 125);
-        BezierCurve(g2,292, 117,303, 117, 314, 118, 326, 125);
-        buffer = floodFill(buffer,  292, 100,  Color.decode("#5f2d24"), Color.decode("#320c09"));
-        buffer = floodFill(buffer,  375, 99,  Color.decode("#5f2d24"), Color.decode("#320c09"));
-        //horn detail
-        g2.setColor(Color.BLACK);
-        BresenhamLine(g2,369, 104, 393, 104);
-        BresenhamLine(g2,368, 93, 391, 88);
-        BresenhamLine(g2,361, 86, 378, 71);
-        BresenhamLine(g2, 353, 77, 369, 65);
-        BresenhamLine(g2,352, 62, 362, 58);
-
-        BresenhamLine(g2,309, 118, 323, 115);
-        BresenhamLine(g2,289, 114, 312, 97);
-        BresenhamLine(g2,280, 105, 293, 50);
-        BezierCurve(g2,265, 102, 266, 94, 266, 87, 269, 79);
-        BezierCurve(g2,247, 102, 248, 95, 249, 90, 249, 85);
-        BezierCurve(g2,228, 95, 232, 90, 233, 86, 234, 81);
-        BezierCurve(g2,217, 80, 219, 77, 219, 76, 222, 73);
 
         // Body
         g2.setColor(Color.decode("#cf9040"));
@@ -111,6 +68,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 315, 252, 323, 270, 339, 313, 344, 350,1);
         bezierCurve(g2, 344, 350, 341, 381, 330, 406, 295, 433,1);
         
+        g2.setColor(Color.decode("#ffa624"));
         bezierCurve(g2, 394, 276, 400, 294, 407, 327, 409, 350,1);
         bezierCurve(g2, 409, 350, 405, 375, 399, 390, 394, 401,1);
         bezierCurve(g2, 394, 401, 370, 428, 339, 446, 299, 456,1);
@@ -119,7 +77,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         
         // buffer = floodFill(buffer,  367, 441, Color.WHITE, Color.decode("#d96b09"));
         // buffer = floodFill(buffer,  307, 445, Color.WHITE, Color.decode("#e97f17"));
-
+        g2.setColor(Color.decode("#cf9040"));
         bezierCurve(g2, 163, 424, 147, 412, 132, 400, 110, 371,1);
         bezierCurve(g2, 252, 443, 237, 443, 221, 442, 204, 439,1);
 
@@ -138,20 +96,10 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 219, 310,211, 315,206, 315,195, 312,1);
         
 
-        // Neck Detail
-        bezierCurve(g2, 322, 270, 350, 292, 380, 294, 392, 277,1); // 1
-        bezierCurve(g2, 335, 309, 362, 335, 395, 335, 403, 311,1); // 2
-        bezierCurve(g2, 343, 352, 363, 375, 391, 379, 409, 351,1); // 3
-        bezierCurve(g2, 332, 393, 342, 408, 361, 420, 393, 402,1); // 4
-        bezierCurve(g2, 313, 417, 311, 434, 315, 447, 327, 450,1); // 5
-        bezierCurve(g2, 247, 444, 243, 448, 242, 453, 247, 460,1); // 6
-        bezierCurve(g2, 219, 443, 212, 444, 211, 452, 215, 458,1); // 7
-        bezierCurve(g2, 319, 400, 331, 423, 364, 432, 394, 400,1);
-        bezierCurve(g2, 153, 429, 150, 424, 153, 419, 160, 420,1);
-        buffer = floodFill(buffer,  381, 330, Color.WHITE, Color.decode("#ffa624"));
-        buffer = floodFill(buffer,  379, 346, Color.WHITE, Color.decode("#ffa624"));
-        buffer = floodFill(buffer,  365, 388, Color.WHITE, Color.decode("#ffa624"));
-        buffer = floodFill(buffer,  337, 414, Color.WHITE, Color.decode("#ffa624"));
+        
+        // buffer = floodFill(buffer,  379, 346, Color.WHITE, Color.decode("#ffa624"));
+        // buffer = floodFill(buffer,  365, 388, Color.WHITE, Color.decode("#ffa624"));
+        // buffer = floodFill(buffer,  337, 414, Color.WHITE, Color.decode("#ffa624"));
         // buffer = floodFill(buffer,  371, 309, Color.WHITE, Color.decode("#ffa624"));
 
         // Leg LF
@@ -196,8 +144,11 @@ public class Assignment1_65050669_65050776 extends JPanel {
         buffer = floodFill(buffer,  311, 488, Color.decode("#f1c387"), Color.decode("#cf9041"));
 
         // Foot LF
+        
+        g2.setColor(Color.decode("#c0822f"));
         bezierCurve(g2, 365, 485, 365, 468, 379, 466, 387, 468,1);
         bezierCurve(g2, 387, 468, 387, 457, 419, 459, 423, 471,1);
+        g2.setColor(Color.decode("#cf9041"));
         bezierCurve(g2, 415, 463, 428, 456, 446, 468, 445, 486,1);
         bezierCurve(g2, 364, 486, 391, 486, 417, 486, 446, 486,1);
         buffer = floodFill(buffer,  407, 462, Color.WHITE, Color.decode("#cf9041"));
@@ -305,7 +256,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         buffer = floodFill(buffer,  292, 100,  Color.decode("#5f2d24"), Color.decode("#320c09"));
         buffer = floodFill(buffer,  375, 99,  Color.decode("#5f2d24"), Color.decode("#320c09"));
         //horn detail
-        g2.setColor(Color.BLACK);
+        g2.setColor(Color.decode("#9f7567"));
         BresenhamLine(g2,369, 104, 393, 104);
         BresenhamLine(g2,368, 93, 391, 88);
         BresenhamLine(g2,361, 86, 378, 71);
@@ -326,7 +277,7 @@ public class Assignment1_65050669_65050776 extends JPanel {
         bezierCurve(g2, 446, 237, 413, 246, 361, 245, 322, 217, 1);
         bezierCurve(g2, 304, 212,  308, 214, 315, 215, 322, 217, 1);
         //shadow
-        g2.setColor(Color.BLACK);
+        g2.setColor(Color.decode("#b76d24"));
         BezierCurve(g2,418, 129,420, 124,419, 117,416, 112);
         BezierCurve(g2,416, 112,427, 116,431, 127,428, 137);
         BezierCurve(g2,428, 137,425, 132,421, 130,418, 129);
@@ -364,14 +315,13 @@ public class Assignment1_65050669_65050776 extends JPanel {
 
         
         //face
+        g2.setColor(Color.decode("#cf9040"));
         bezierCurve(g2, 394, 110,401, 109, 409, 105, 416, 112,1);
         bezierCurve(g2, 410, 156, 415, 145, 418, 137, 418, 129,1);
         bezierCurve(g2, 369, 110,359, 105, 352, 97, 344, 89, 1);
         bezierCurve(g2, 344, 89,   337, 78, 317, 68, 293, 73, 1);
         bezierCurve(g2, 293, 73,306, 76, 317, 85, 321, 95, 1);
-        bezierCurve(g2, 244, 123, 257, 114, 278, 112, 292, 117,1);
-        // BresenhamLine(g2,  410, 156, 418, 129);
-        //ddaLine(g2,  410, 156, 418, 129);
+        bezierCurve(g2, 305, 92, 309, 91, 307, 91, 321, 95, 1);
         
         bezierCurve(g2, 431, 261, 428, 270, 418, 278, 405, 281, 1);
         bezierCurve(g2, 405, 281, 410, 275, 411, 271, 410, 265,1);
@@ -473,21 +423,44 @@ public class Assignment1_65050669_65050776 extends JPanel {
 
         bezierCurve(g2,480,130,473,115,467,105,473,97,3);
         bezierCurve(g2,492,135,498,144,496,140,492,135,3);
+        // Neck Detail
+        buffer = floodFill(buffer,  381, 330, Color.WHITE, Color.decode("#ffa624"));
+        
+        g2.setColor(Color.decode("#f18c0e"));
+        bezierCurve(g2, 322, 270, 350, 292, 380, 294, 392, 277,1); // 1
+        bezierCurve(g2, 335, 309, 362, 335, 395, 335, 403, 311,1); // 2
+        bezierCurve(g2, 343, 352, 363, 375, 391, 379, 409, 351,1); // 3
+        bezierCurve(g2, 332, 393, 342, 408, 361, 420, 393, 402,1); // 4
+        bezierCurve(g2, 313, 417, 311, 434, 315, 447, 327, 450,1); // 5
+        bezierCurve(g2, 247, 444, 243, 448, 242, 453, 247, 460,1); // 6
+        bezierCurve(g2, 219, 443, 212, 444, 211, 452, 215, 458,1); // 7
+        bezierCurve(g2, 153, 429, 150, 424, 153, 419, 160, 420,1);
+
+        bezierCurve(g2, 319, 400, 331, 423, 364, 432, 394, 400,1);
         //head fill
         buffer = floodFill(buffer,    269, 164, Color.WHITE, Color.decode("#cf9040"));
         buffer = floodFill(buffer,   313, 235, Color.WHITE, Color.decode("#cf9040"));
+        
+        buffer = floodFill(buffer,   345, 112, Color.WHITE, Color.decode("#cf9040"));
         //shadow head fill
-
+        
+        buffer = floodFill(buffer,   206, 165, Color.WHITE, Color.decode("#ac5e17"));
+        buffer = floodFill(buffer,   268, 219, Color.WHITE, Color.decode("#ac5e17"));
         //body fill
         buffer = floodFill(buffer,  153, 339, Color.WHITE, Color.decode("#cf9040"));
         buffer = floodFill(buffer,  379, 455, Color.WHITE, Color.decode("#cf9040"));
-        //shadow body fill
+        //shadow fill
         buffer = floodFill(buffer,  294, 466, Color.WHITE, Color.decode("#b76d24"));
+        buffer = floodFill(buffer,  153, 394, Color.WHITE, Color.decode("#b76d24"));
+        buffer = floodFill(buffer,  225, 420, Color.WHITE, Color.decode("#b76d24"));
+        buffer = floodFill(buffer,  427, 126, Color.WHITE, Color.decode("#b76d24"));
         
         buffer = floodFill(buffer,  180, 465, Color.WHITE, Color.decode("#b76d24"));
         buffer = floodFill(buffer,   181, 474, Color.decode("#f1c387"), Color.decode("#b76d24"));
         buffer = floodFill(buffer,   297, 473, Color.decode("#f1c387"), Color.decode("#b76d24"));
-
+        //scale fill
+        buffer = floodFill(buffer,   110, 293, Color.WHITE, Color.decode("#5f2d24"));
+        buffer = floodFill(buffer,   254, 208, Color.WHITE, Color.decode("#5f2d24"));
         
         // Beard เส้น Add
         g2.setColor( Color.decode("#5c2f23"));
